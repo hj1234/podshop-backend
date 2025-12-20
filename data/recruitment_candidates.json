@@ -1,0 +1,167 @@
+[
+  {
+    "id": "candidate-1",
+    "specialism": "Global Macro",
+    "asset_class": "fx",
+    "beta_mu": 0.4,
+    "beta_sigma": 0.5,
+    "vol_range": [
+      0.01,
+      0.03
+    ],
+    "first_name": "Brad",
+    "last_name": "Sterling",
+    "bio": "Claims he predicted the 2008 crash (he was 12).",
+    "active": true
+  },
+  {
+    "id": "candidate-2",
+    "specialism": "Equity TMT",
+    "asset_class": "equities",
+    "beta_mu": 1.1,
+    "beta_sigma": 0.2,
+    "vol_range": [
+      0.015,
+      0.04
+    ],
+    "first_name": "Chad",
+    "last_name": "Hancock",
+    "bio": "Spent 3 years at Citadel. Has a non-compete he thinks is 'unenforceable'.",
+    "active": true
+  },
+  {
+    "id": "candidate-3",
+    "specialism": "Fixed Income RV",
+    "asset_class": "fixed_income",
+    "beta_mu": 0.05,
+    "beta_sigma": 0.1,
+    "vol_range": [
+      0.005,
+      0.01
+    ],
+    "first_name": "Winston",
+    "last_name": "Vanderbilt",
+    "bio": "Writes a substack about interest rates. 500k followers.",
+    "active": true
+  },
+  {
+    "id": "candidate-4",
+    "specialism": "Deep Value",
+    "asset_class": "equities",
+    "beta_mu": 0.8,
+    "beta_sigma": 0.3,
+    "vol_range": [
+      0.01,
+      0.02
+    ],
+    "first_name": "Preston",
+    "last_name": "Roth",
+    "bio": "Only trades when Mercury is in retrograde.",
+    "active": true
+  },
+  {
+    "id": "candidate-5",
+    "specialism": "Stat Arb",
+    "asset_class": "generalist",
+    "beta_mu": 0.0,
+    "beta_sigma": 0.05,
+    "vol_range": [
+      0.005,
+      0.015
+    ],
+    "first_name": "Chip",
+    "last_name": "Dubois",
+    "bio": "Previously managed money for a cartel (allegedly).",
+    "active": true
+  },
+  {
+    "id": "candidate-6",
+    "specialism": "Global Macro",
+    "asset_class": "fx",
+    "beta_mu": 0.4,
+    "beta_sigma": 0.5,
+    "vol_range": [
+      0.01,
+      0.03
+    ],
+    "first_name": "Trey",
+    "last_name": "Kowalski",
+    "bio": "Wears a vest in the shower. Pure efficiency.",
+    "active": true
+  },
+  {
+    "id": "candidate-7",
+    "specialism": "Equity TMT",
+    "asset_class": "equities",
+    "beta_mu": 1.1,
+    "beta_sigma": 0.2,
+    "vol_range": [
+      0.015,
+      0.04
+    ],
+    "first_name": "Gorman",
+    "last_name": "Chen",
+    "bio": "Thinks 'Risk Management' is for cowards.",
+    "active": true
+  },
+  {
+    "id": "candidate-8",
+    "specialism": "Fixed Income RV",
+    "asset_class": "fixed_income",
+    "beta_mu": 0.05,
+    "beta_sigma": 0.1,
+    "vol_range": [
+      0.005,
+      0.01
+    ],
+    "first_name": "Liz",
+    "last_name": "Gupta",
+    "bio": "Brings his own Bloomberg keyboard to interviews.",
+    "active": true
+  },
+  {
+    "id": "candidate-9",
+    "specialism": "Deep Value",
+    "asset_class": "equities",
+    "beta_mu": 0.8,
+    "beta_sigma": 0.3,
+    "vol_range": [
+      0.01,
+      0.02
+    ],
+    "first_name": "Sloane",
+    "last_name": "Schmidt",
+    "bio": "Left last firm because the coffee wasn't single-origin.",
+    "active": true
+  },
+  {
+    "id": "candidate-10",
+    "specialism": "Stat Arb",
+    "asset_class": "generalist",
+    "beta_mu": 0.0,
+    "beta_sigma": 0.05,
+    "vol_range": [
+      0.005,
+      0.015
+    ],
+    "first_name": "Caroline",
+    "last_name": "Sterling",
+    "bio": "Claims he predicted the 2008 crash (he was 12).",
+    "active": true
+  },
+  {
+    "first_name": "Henry",
+    "last_name": "Jolliffe",
+    "specialism": "Global Macro",
+    "asset_class": "fx",
+    "beta_mu": 10,
+    "beta_sigma": 0.1,
+    "vol_range": [
+      0.01,
+      0.02
+    ],
+    "bio": "Simply the best",
+    "active": true,
+    "id": "candidate-11"
+  }
+]

@@ -1,0 +1,238 @@
+[
+  {
+    "id": "newswire-flavor-1",
+    "channel": "newswire",
+    "creation_trigger": "random",
+    "creation_trigger_config": {
+      "probability": 0.05
+    },
+    "features": {
+      "read_only": true
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "type": "flavor",
+      "text": "Analyst spotted crying in the bathroom."
+    },
+    "active": true
+  },
+  {
+    "id": "newswire-news-1",
+    "channel": "newswire",
+    "creation_trigger": "random",
+    "creation_trigger_config": {
+      "probability": 0.03
+    },
+    "features": {
+      "read_only": true
+    },
+    "impact": {
+      "type": "simulation",
+      "simulation": {
+        "volatility_spike": 0.008
+      }
+    },
+    "content": {
+      "type": "info",
+      "headline": "Fed Signals Rate Cut",
+      "body": "Federal Reserve hints at potential rate cuts in upcoming meetings, sparking optimism in equity markets."
+    },
+    "active": true
+  },
+  {
+    "id": "email-welcome",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "game_start"
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "sender": "Fund Administrator",
+      "subject": "Fund Launch Successful",
+      "body": "Welcome to the platform.\n\nStructure: Pass-Through\nMgmt Fee: 2%\nPerf Fee: 20%\n\nYour goal is to grow the Firm Cash by collecting management and performance fees from investors.",
+      "type": "standard"
+    },
+    "active": true
+  },
+  {
+    "id": "email-leverage-warning-8x",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "leverage_threshold",
+      "conditions": {
+        "leverage": { "gte": 8.0, "lt": 10.0 }
+      }
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "sender": "Prime Broker Risk",
+      "subject": "Risk Alert: Elevated Leverage (8.0x)",
+      "body": "Dear Fund Manager,\n\nYour effective leverage has reached 8.0x. While within acceptable limits, we advise monitoring your gross exposure closely. Our liquidation threshold is 15.0x.\n\nRegards,\nPrime Broker Risk Desk",
+      "type": "alert"
+    },
+    "active": true
+  },
+  {
+    "id": "email-recruitment",
+    "channel": "email",
+    "creation_trigger": "random",
+    "creation_trigger_config": {
+      "probability": 0.072
+    },
+    "features": {
+      "read_only": false,
+      "requires_response": true
+    },
+    "impact": {
+      "type": "user_action",
+      "user_action": {
+        "hire": {
+          "type": "hire_pod"
+        },
+        "reject": {
+          "type": "none"
+        }
+      }
+    },
+    "content": {
+      "sender": "Headhunter",
+      "subject": "Candidate: {candidate_name} ({specialism})",
+      "body": "Hey,\n\nThought you might like {candidate_name}'s profile.\n\n---\nCANDIDATE PROFILE\n---\n\nName: {candidate_name}\nSpecialism: {specialism}\n\nPERFORMANCE METRICS:\nAlpha (Annualized): {alpha_display}\nBeta: {beta}\nLast Drawdown: {last_drawdown}\nLifetime PnL: {lifetime_pnl}\n\nCOMPENSATION DEMANDS:\nSign-on Bonus: ${signing_bonus}\nAnnual Salary: ${salary}\nPerformance Cut: {pnl_cut}%\n\nBIO:\n{bio}\n\nBest,\nHeadhunter",
+      "type": "recruitment",
+      "data": {
+        "candidate_name": "{candidate_name}",
+        "specialism": "{specialism}",
+        "alpha_display": "{alpha_display}",
+        "beta": "{beta}",
+        "last_drawdown": "{last_drawdown}",
+        "lifetime_pnl": "{lifetime_pnl}",
+        "signing_bonus": "{signing_bonus}",
+        "salary": "{salary}",
+        "pnl_cut": "{pnl_cut}",
+        "bio": "{bio}"
+      }
+    },
+    "active": true
+  },
+  {
+    "id": "email-drawdown-warning",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "pod_drawdown",
+      "conditions": {
+        "drawdown": { "lte": -0.05 }
+      }
+    },
+    "features": {
+      "read_only": false,
+      "requires_response": true
+    },
+    "impact": {
+      "type": "user_action",
+      "user_action": {
+        "fire": {
+          "type": "fire_pod"
+        },
+        "monitor": {
+          "type": "none"
+        }
+      }
+    },
+    "content": {
+      "sender": "Risk Management",
+      "subject": "Drawdown Alert: {pod_name}",
+      "body": "RISK MANAGEMENT ALERT\n\nPod: {pod_name}\nCurrent Drawdown: {drawdown_display}%\n\nThis pod has exceeded the 5% drawdown threshold.\n\nOPTIONS:\n1. Continue monitoring\n2. Terminate pod (no cost)",
+      "type": "alert",
+      "data": {
+        "pod_id": "{pod_id}",
+        "pod_name": "{pod_name}",
+        "drawdown_display": "{drawdown_display}"
+      }
+    },
+    "active": true
+  },
+  {
+    "id": "ledger-monthly-salaries",
+    "channel": "ledger",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "month_end"
+    },
+    "features": {
+      "read_only": true
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "description": "Monthly Salaries ({pod_count} pods)",
+      "amount": {
+        "formula": "total_salaries / 12"
+      },
+      "affect_cash": false
+    },
+    "active": true
+  },
+  {
+    "id": "ledger-management-fee",
+    "channel": "ledger",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "month_end"
+    },
+    "features": {
+      "read_only": true
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "description": "Management Fee (2% annual)",
+      "amount": {
+        "formula": "investor_equity * 0.02 / 12"
+      },
+      "affect_cash": true
+    },
+    "active": true
+  },
+  {
+    "id": "ledger-sign-on-bonus",
+    "channel": "ledger",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "pod_hired"
+    },
+    "features": {
+      "read_only": true
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "description": "Sign-on Bonus: {pod_name}",
+      "amount": {
+        "formula": "-signing_bonus"
+      },
+      "affect_cash": true
+    },
+    "active": true
+  }
+]
+
