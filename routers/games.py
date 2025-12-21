@@ -27,30 +27,46 @@ class HistoricalGameCreate(BaseModel):
     geolocation: Optional[str] = None
 
 @router.get("/games/in-progress")
-async def list_games_in_progress():
-    """List all games in progress"""
+async def list_games_in_progress(limit: int = 50, offset: int = 0):
+    """List games in progress with pagination"""
     conn = database.get_db_connection()
     cursor = conn.cursor()
     
+    # Get total count
+    cursor.execute("""
+        SELECT COUNT(*) as total
+        FROM games_in_progress
+    """)
+    total_result = cursor.fetchone()
+    total_count = total_result["total"] if total_result else 0
+    
+    # Get paginated games
     cursor.execute("""
         SELECT id, fund_name, time_started, geolocation, created_at
         FROM games_in_progress
         ORDER BY time_started DESC
-    """)
+        LIMIT ? OFFSET ?
+    """, (limit, offset))
     
     games = cursor.fetchall()
     conn.close()
     
-    return [
-        {
-            "id": game["id"],
-            "fund_name": game["fund_name"],
-            "time_started": game["time_started"],
-            "geolocation": game["geolocation"],
-            "created_at": game["created_at"]
-        }
-        for game in games
-    ]
+    return {
+        "games": [
+            {
+                "id": game["id"],
+                "fund_name": game["fund_name"],
+                "time_started": game["time_started"],
+                "geolocation": game["geolocation"],
+                "created_at": game["created_at"]
+            }
+            for game in games
+        ],
+        "total": total_count,
+        "limit": limit,
+        "offset": offset,
+        "has_more": (offset + limit) < total_count
+    }
 
 @router.post("/games/in-progress")
 async def create_game_in_progress(game: GameInProgressCreate):
@@ -242,34 +258,50 @@ async def end_game(
     }
 
 @router.get("/games/historical")
-async def list_historical_games():
-    """List all historical games"""
+async def list_historical_games(limit: int = 50, offset: int = 0):
+    """List historical games with pagination"""
     conn = database.get_db_connection()
     cursor = conn.cursor()
     
+    # Get total count
+    cursor.execute("""
+        SELECT COUNT(*) as total
+        FROM historical_games
+    """)
+    total_result = cursor.fetchone()
+    total_count = total_result["total"] if total_result else 0
+    
+    # Get paginated games
     cursor.execute("""
         SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
         FROM historical_games
         ORDER BY time_started DESC
-    """)
+        LIMIT ? OFFSET ?
+    """, (limit, offset))
     
     games = cursor.fetchall()
     conn.close()
     
-    return [
-        {
-            "id": game["id"],
-            "fund_name": game["fund_name"],
-            "time_started": game["time_started"],
-            "time_ended": game["time_ended"],
-            "completed": bool(game["completed"]),
-            "geolocation": game["geolocation"],
-            "time_played": game["time_played"],
-            "total_pnl": game["total_pnl"],
-            "created_at": game["created_at"]
-        }
-        for game in games
-    ]
+    return {
+        "games": [
+            {
+                "id": game["id"],
+                "fund_name": game["fund_name"],
+                "time_started": game["time_started"],
+                "time_ended": game["time_ended"],
+                "completed": bool(game["completed"]),
+                "geolocation": game["geolocation"],
+                "time_played": game["time_played"],
+                "total_pnl": game["total_pnl"],
+                "created_at": game["created_at"]
+            }
+            for game in games
+        ],
+        "total": total_count,
+        "limit": limit,
+        "offset": offset,
+        "has_more": (offset + limit) < total_count
+    }
 
 @router.get("/games/historical/{game_id}")
 async def get_historical_game(game_id: str):
