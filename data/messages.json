@@ -1,46 +1,3056 @@
 [
-  {
-    "id": "newswire-flavor-1",
-    "channel": "newswire",
-    "creation_trigger": "random",
-    "creation_trigger_config": {
-      "probability": 0.05
+    {
+      "id": "newswire-flavor-1",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01264
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "URGENT: Office coffee machine requires firmware update."
+      },
+      "active": true
     },
-    "features": {
-      "read_only": true
+    {
+      "id": "newswire-flavor-2",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00822
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "BREAKING: The printer is making that noise again."
+      },
+      "active": true
     },
-    "impact": {
-      "type": "none"
+    {
+      "id": "newswire-flavor-3",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00601
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "FACILITIES: AC set to 'Arctic Tundra' to improve alertness."
+      },
+      "active": true
     },
-    "content": {
-      "type": "flavor",
-      "text": "Analyst spotted crying in the bathroom."
+    {
+      "id": "newswire-flavor-4",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01415
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Fax machine is broken. No one noticed for 4 years."
+      },
+      "active": true
     },
-    "active": true
-  },
-  {
-    "id": "newswire-news-1",
-    "channel": "newswire",
-    "creation_trigger": "random",
-    "creation_trigger_config": {
-      "probability": 0.03
+    {
+      "id": "newswire-flavor-5",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00794
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ALERT: Elevator 3 is trapped in a spacetime loop."
+      },
+      "active": true
     },
-    "features": {
-      "read_only": true
+    {
+      "id": "newswire-flavor-6",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00614
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LOGISTICS: Shortage of ergonomic chairs reported."
+      },
+      "active": true
     },
-    "impact": {
-      "type": "simulation",
-      "simulation": {
-        "volatility_spike": 0.008
-      }
+    {
+      "id": "newswire-flavor-7",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01286
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "IT ALERT: Someone plugged a space heater into the server rack."
+      },
+      "active": true
     },
-    "content": {
-      "type": "info",
-      "headline": "Fed Signals Rate Cut",
-      "body": "Federal Reserve hints at potential rate cuts in upcoming meetings, sparking optimism in equity markets."
+    {
+      "id": "newswire-flavor-8",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01123
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "KITCHEN: The milk has gone bad. Repeat: The milk is bad."
+      },
+      "active": true
     },
-    "active": true
-  },
+    {
+      "id": "newswire-flavor-9",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00535
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "FACILITIES: Pigeons spotted negotiating on window ledge."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-10",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01343
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MEMO: 'Casual Friday' does not include pajama pants."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-11",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01156
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SECURITY: Keycard system rejected CEO. Anarchy ensues."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-12",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00775
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Vending machine stuck on E4 (Snickers)."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-13",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01225
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "CLEANING: Janitor accidentally unplugged the AI."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-14",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00662
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "OFFICE: Fire drill scheduled during your most important call."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-15",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00983
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SUPPLY: We are critically low on sticky notes."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-16",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0095
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ALERT: The ficus plant in the lobby has died."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-17",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00906
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "IT: Have you tried turning the economy off and on again?"
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-18",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01022
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LOST & FOUND: One soul, slightly used. See HR."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-19",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01387
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "KITCHEN: Who microwaved fish? Suspect is at large."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-20",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00571
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "FACILITIES: Bathroom code changed to Fibonacci sequence."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-21",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00918
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "HR: Emotional support animals must be SEC registered."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-22",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00565
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SIGHTING: Analyst spotted crying in the bathroom."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-23",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01186
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PERSONNEL: Intern sent to buy 'theta' from the corner store."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-24",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01473
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Junior trader realizes 'YOLO' is not a strategy."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-25",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01368
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "HR: Burnout is now considered a competitive advantage."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-26",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00784
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "RUMOR: Senior PM makes investment decisions via Magic 8-Ball."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-27",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01373
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "HIRING: Seeking candidate with 10 years experience in 2-year-old tech."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-28",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01296
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "WELLNESS: Mandatory fun scheduled for 4:00 PM."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-29",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01188
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ANALYST: Mistook astrology chart for technical analysis."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-30",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0116
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Trader falls asleep on keyboard, buys 10M corn futures."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-31",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00944
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "HR: Please stop asking the AI for dating advice."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-32",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01028
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PERFORMANCE: Morale improves after free bagel announcement."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-33",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0062
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SIGHTING: PM wearing fleece vest in July. Bearish signal."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-34",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00568
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PERSONNEL: New hire thinks 'The Greeks' is a restaurant."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-35",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00864
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "HR: Reminder that screaming into a pillow is allowed."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-36",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01265
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Head of quant trading is actually three kids in a trench coat."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-37",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00634
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "VACATION: All PTO requests denied due to 'market conditions'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-38",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00579
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LIFESTYLE: Sleep is for people with low alpha."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-39",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00507
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PERSONNEL: Analyst attempts to hedge personal anxiety."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-40",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00761
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "RUMOR: The CEO is just a hologram."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-41",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00552
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Excel is not responding. Pray."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-42",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01043
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "DATA: Spreadsheet formula circular reference detected."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-43",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00902
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SYSTEM: Latency spike caused by someone streaming 4K cat videos."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-44",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01218
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ALGORITHM: Trading bot developed sentience, refuses to work."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-45",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00702
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Monitor refresh rate out of sync with reality."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-46",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01325
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SECURITY: Password '123456' compromised. Again."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-47",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01073
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "DATA: Bloomberg terminal simply says 'Oof'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-48",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00663
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Cloud storage evaporated due to actual clouds."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-49",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01341
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Internet down. Traders forced to look out window."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-50",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01241
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SYSTEM: AI suggests shorting the entire human race."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-51",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01003
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Mouse battery low. Efficiency down 40%."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-52",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00803
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "DATA: Chart axis inverted. We are actually rich."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-53",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00842
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SYSTEM: Dark Mode disabled. Retinas burning."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-54",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00956
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Keyboard jammed on 'Buy' button."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-55",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00548
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ALGORITHM: Bot bought entire supply of ornamental gourds."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-56",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01037
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "DATA: Corrupted sector found in Q3 projections."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-57",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01491
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: Zoom call mute button failed. Oops."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-58",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00748
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SYSTEM: 5G interference caused by tinfoil hats."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-59",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00639
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: The blockchain is just a Google Doc."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-60",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00794
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "TECH: API limit reached. Trading via carrier pigeon."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-61",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00752
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MACRO: Fed Chair decides rates based on coin flip."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-62",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00774
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MARKET: Graph goes down. Panic. Graph goes up. Panic."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-63",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01295
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ECONOMY: Inflation now affecting price of thoughts."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-64",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00787
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "BREAKING: Money isn't real, sources say."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-65",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0113
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SUPPLY CHAIN: Global shortage of common sense."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-66",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0059
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MARKET: Bear market declared for gummy bears."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-67",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01027
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MACRO: GDP revised to '$12 and a coupon'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-68",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00566
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "NEWS: Billionaire tweets weird meme. Market crashes."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-69",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01197
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ECONOMY: Recession canceled due to lack of interest."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-70",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00924
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Gold prices plummet after alchemy breakthrough."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-71",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01023
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MARKET: S&P 500 now just S&P 4."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-72",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00593
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MACRO: Interest rates unchanged. Everyone is bored."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-73",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01038
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "BREAKING: Housing market bubble burst by actual pin."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-74",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01001
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ECONOMY: Avocado toast prices stabilize."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-75",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01163
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "NEWS: Country adopts Dogecoin as reserve currency."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-76",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00604
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MARKET: Dead cat bounce confirmed. Cat is fine."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-77",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01122
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MACRO: Yield curve inverted so hard it broke."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-78",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01412
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Oil prices negative. They pay you to take it."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-79",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00684
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "ECONOMY: Stimulus check spent entirely on lottery tickets."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-80",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01465
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "MARKET: Volatility index is feeling volatile."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-81",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0119
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SCANDAL: CEO caught using comic sans."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-82",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00761
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Competitor's logo looks slightly better."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-83",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01077
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LEGAL: We are being sued by a sentient vending machine."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-84",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01091
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PR: Company statement: 'My bad'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-85",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01055
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "EVENT: Office potluck postponed due to salmonella risk."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-86",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01141
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Competitor acquired by a teenager in a garage."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-87",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01031
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LEGAL: Insider trading definition updated to include 'lucky guesses'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-88",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.0093
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SCANDAL: Someone ate the lunch labeled 'Dave'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-89",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00876
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PR: Rebranding to 'X'. Oh wait, that's taken."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-90",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00708
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "EVENT: Team building exercise resulted in minor injuries."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-91",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00987
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Competitor releases product that actually works."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-92",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01257
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LEGAL: Cease and desist received from Santa Claus."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-93",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00631
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SCANDAL: The 'Cloud' is actually just a basement in Idaho."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-94",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01292
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PR: Apology issued for previous apology."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-95",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00627
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "EVENT: Holiday party budget cut to $5."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-96",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00939
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "UPDATE: Competitor's stock ticker is cooler than ours."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-97",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00658
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "LEGAL: Lawyer accidentally objectified to the wrong thing."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-98",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01035
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "SCANDAL: Secret stash of Oreos found in server room."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-99",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.00812
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "PR: We are pivoting to 'Blockchain AI VR NFT'."
+      },
+      "active": true
+    },
+    {
+      "id": "newswire-flavor-100",
+      "channel": "newswire",
+      "creation_trigger": "random",
+      "creation_trigger_config": {
+        "probability": 0.01355
+      },
+      "features": {
+        "read_only": true
+      },
+      "impact": {
+        "type": "none"
+      },
+      "content": {
+        "type": "flavor",
+        "text": "EVENT: 'Bring your child to work' ended in hostile takeover."
+      },
+      "active": true
+    },
+    {
+        "id": "newswire-news-1",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003198
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00501
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Fed Signals Rate Cut",
+          "body": "Federal Reserve hints at potential rate cuts in upcoming meetings, sparking optimism in equity markets."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-2",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.00428
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00472
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "CPI Inflation Data Higher Than Expected",
+          "body": "Consumer Price Index rises 0.4% month-over-month, exceeding analyst forecasts of 0.2%."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-3",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004947
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00189
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Non-Farm Payrolls Beat Estimates",
+          "body": "US economy added 250k jobs last month, suggesting labor market resilience despite tightening."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-4",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003981
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0011
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "OPEC+ Announces Production Cuts",
+          "body": "Oil prices surge as OPEC+ agrees to reduce output by 1 million barrels per day."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-5",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004743
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00179
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Tech Giant Faces Antitrust Probe",
+          "body": "DOJ launches investigation into major tech conglomerate over alleged monopolistic practices."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-6",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004831
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00833
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Retail Sales Slump in Q3",
+          "body": "Consumer spending slows as retail sales data misses expectations by 1.5%."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-7",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004672
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00385
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Semiconductor Shortage Eases",
+          "body": "Global chip supply chain shows signs of recovery, boosting auto and tech manufacturing sectors."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-8",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004128
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00551
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "ECB Raises Interest Rates",
+          "body": "European Central Bank hikes rates by 50bps to combat persistent Eurozone inflation."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-9",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002939
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00676
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Major Merger Announced in Pharma",
+          "body": "Two leading pharmaceutical companies agree to $60B merger, creating industry behemoth."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-10",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004184
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00581
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "GDP Growth Slows to 1.1%",
+          "body": "Quarterly GDP growth decelerates, raising concerns of a potential soft recession."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-11",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004938
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0064
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Housing Starts Fall to 2-Year Low",
+          "body": "New residential construction projects drop significantly as mortgage rates climb."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-12",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003265
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00643
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "China Manufacturing PMI Expands",
+          "body": "Factory activity in China returns to growth territory, signaling increased global demand."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-13",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003758
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00235
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Gold Prices Hit All-Time High",
+          "body": "Safe-haven assets rally as geopolitical tensions drive gold past psychological resistance levels."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-14",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002744
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00273
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Crypto Regulation Bill Introduced",
+          "body": "Senate committee proposes comprehensive framework for digital asset oversight."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-15",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003019
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00919
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Major Bank Passes Stress Test",
+          "body": "Systemically important financial institution clears capital adequacy requirements with ease."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-16",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003068
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00343
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Yield Curve Inversion Deepens",
+          "body": "Spread between 2-year and 10-year Treasury yields widens, a classic recession indicator."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-17",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002879
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00213
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Supply Chain Disruption at Major Port",
+          "body": "Labor strike at key shipping hub delays cargo, threatening holiday inventory levels."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-18",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002882
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00376
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Electric Vehicle Subsidies Extended",
+          "body": "Government announces extension of tax credits for EV purchases, boosting green energy stocks."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-19",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004987
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0091
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Corporate Tax Rate Hike Proposed",
+          "body": "Administration unveils plan to increase corporate tax rate to 28% to fund infrastructure."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-20",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004547
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00726
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Airline Industry Profits Soar",
+          "body": "Travel demand rebounds to pre-pandemic levels, driving record quarterly profits for carriers."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-21",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004049
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00272
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Cybersecurity Breach at Retail Giant",
+          "body": "Millions of customer records compromised in massive data hack; stock tumbles in after-hours."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-22",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.00433
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00613
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Luxury Goods Demand Cools",
+          "body": "High-end retailers report softening demand in Asian markets."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-23",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004773
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00797
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Natural Gas Prices Plummet",
+          "body": "Unseasonably warm winter weather leads to excess natural gas inventory and price drop."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-24",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003302
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0035
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Trade Deficit Narrows",
+          "body": "Export growth outpaces imports, shrinking the national trade deficit for the second consecutive month."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-25",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003659
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00925
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Unemployment Rate Ticks Up",
+          "body": "Jobless rate rises slightly to 3.9%, though still historically low."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-26",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003383
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00185
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Consumer Confidence Index Dips",
+          "body": "Sentiment survey shows consumers are increasingly worried about long-term economic outlook."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-27",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004542
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00449
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "New Trade Tariff Imposed",
+          "body": "Tariffs of 25% placed on imported steel and aluminum, sparking trade war fears."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-28",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004642
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00609
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Biotech Firm Gains FDA Approval",
+          "body": "Shares skyrocket as FDA approves novel gene therapy treatment."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-29",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003155
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00526
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Automaker Suspends Dividend",
+          "body": "Legacy car manufacturer halts dividend payouts to preserve cash for EV transition."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-30",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002925
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00744
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Streaming Service Adds Subscribers",
+          "body": "Media company reports 5 million net new subscribers, crushing Wall Street estimates."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-31",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.00276
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00371
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Sovereign Credit Rating Downgraded",
+          "body": "Rating agency cuts outlook on national debt from Stable to Negative citing fiscal deficit."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-32",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002825
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00239
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "IPO Market Reopens",
+          "body": "First major tech IPO of the year prices above range, signaling renewed investor appetite."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-33",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003404
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00411
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Wheat Prices Spike on Crop Failure",
+          "body": "Drought conditions in key growing regions send wheat futures limit-up."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-34",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004144
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00445
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Dollar Index Strengthens",
+          "body": "USD rallies against major currency basket as flight-to-safety trade intensifies."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-35",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004089
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00967
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Home Price Growth Decelerates",
+          "body": "National home price index shows cooling market as affordability issues bite."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-36",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.002586
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00923
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Wholesale Inventories Build",
+          "body": "Unsold goods pile up at wholesalers, potentially indicating slowing future orders."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-37",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003649
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00696
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Major Retailer Files Bankruptcy",
+          "body": "Iconic department store chain files Chapter 11 after failing to secure rescue financing."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-38",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004096
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00377
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Solar Energy Costs Drop",
+          "body": "Technological breakthrough reduces cost of solar panel production by 15%."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-39",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003461
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00155
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Video Game Sector Consolidation",
+          "body": "Gaming publisher acquired for $12B in all-cash deal."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-40",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.00407
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00383
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Global Shipping Rates Normalize",
+          "body": "Container freight rates return to pre-crisis averages as logistics bottlenecks clear."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-41",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003994
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00248
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Coffee Futures Rally",
+          "body": "Frost in Brazil damages coffee crop, threatening global supply of Arabica beans."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-42",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004307
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00237
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Tech Layoffs Announced",
+          "body": "Major software company announces 10% workforce reduction to improve efficiency."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-43",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004497
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00173
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Bond Market Volatility Spikes",
+          "body": "MOVE Index jumps as traders struggle to price in future rate path."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-44",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.00286
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0077
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Construction Spending Beats Estimates",
+          "body": "Public infrastructure projects drive unexpected gain in construction outlays."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-45",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004104
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0059
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Student Loan Forgiveness Ruled Unconstitutional",
+          "body": "Supreme Court blocks debt relief plan; consumer discretionary stocks slide."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-46",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004902
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00535
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Start-up Valuation Bubble Bursts",
+          "body": "Unicorn valuations slashed in latest funding rounds as VCs turn cautious."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-47",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003675
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.0039
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Rare Earth Mineral Discovery",
+          "body": "Massive deposit of critical minerals found, reducing reliance on foreign imports."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-48",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003111
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00234
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Pension Funds Rebalance",
+          "body": "End-of-quarter rebalancing sees large rotation from equities into fixed income."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-49",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.004372
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00634
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "CEO Steps Down",
+          "body": "Long-serving Chief Executive of Fortune 500 company announces surprise retirement."
+        },
+        "active": true
+      },
+      {
+        "id": "newswire-news-50",
+        "channel": "newswire",
+        "creation_trigger": "random",
+        "creation_trigger_config": {
+          "probability": 0.003742
+        },
+        "features": {
+          "read_only": true
+        },
+        "impact": {
+          "type": "simulation",
+          "simulation": {
+            "volatility_spike": 0.00639
+          }
+        },
+        "content": {
+          "type": "info",
+          "headline": "Minimum Wage Increased",
+          "body": "Federal legislation passes to raise minimum wage, impacting service sector margins."
+        },
+        "active": true
+      },
+    
+
   {
     "id": "email-welcome",
     "channel": "email",
@@ -64,6 +3074,28 @@
     "active": true
   },
   {
+    "id": "email-first-leverage-use",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "first_leverage_use"
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "sender": "{prime_broker_name} Prime Services",
+      "subject": "Welcome to Prime Services",
+      "body": "Dear Fund Manager,\n\nWe noticed you have begun utilizing your margin facility. Welcome to {prime_broker_name} Prime Services.\n\nYour leverage facility is now active. You can borrow up to 10x your investor equity, but be aware that exceeding 15.0x effective leverage will trigger an automatic margin call and liquidation.\n\nInterest Rate: 4% annualized\nLiquidation Threshold: 15.0x effective leverage\n\nWe're here to help you maximize your returns while managing risk appropriately.\n\nBest regards,\n{prime_broker_name} Prime Services Team",
+      "type": "standard"
+    },
+    "active": true
+  },
+  {
     "id": "email-leverage-warning-8x",
     "channel": "email",
     "creation_trigger": "game_event",
@@ -81,9 +3113,85 @@
       "type": "none"
     },
     "content": {
-      "sender": "Prime Broker Risk",
+      "sender": "{prime_broker_name} Risk Desk",
       "subject": "Risk Alert: Elevated Leverage (8.0x)",
-      "body": "Dear Fund Manager,\n\nYour effective leverage has reached 8.0x. While within acceptable limits, we advise monitoring your gross exposure closely. Our liquidation threshold is 15.0x.\n\nRegards,\nPrime Broker Risk Desk",
+      "body": "Dear Fund Manager,\n\nYour effective leverage has reached 8.0x. While within acceptable limits, we advise monitoring your gross exposure closely. Our liquidation threshold is 15.0x.\n\nRegards,\n{prime_broker_name} Risk Desk",
+      "type": "alert"
+    },
+    "active": true
+  },
+  {
+    "id": "email-leverage-warning-10x",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "leverage_threshold",
+      "conditions": {
+        "leverage": { "gte": 10.0, "lt": 12.5 }
+      }
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "sender": "{prime_broker_name} Risk Desk",
+      "subject": "Risk Alert: High Leverage (10.0x)",
+      "body": "Dear Fund Manager,\n\nYour effective leverage has reached 10.0x. This is approaching dangerous territory. Please exercise caution. Our liquidation threshold is 15.0x.\n\nRegards,\n{prime_broker_name} Risk Desk",
+      "type": "alert"
+    },
+    "active": true
+  },
+  {
+    "id": "email-leverage-warning-12.5x",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "leverage_threshold",
+      "conditions": {
+        "leverage": { "gte": 12.5, "lt": 15.0 }
+      }
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "none"
+    },
+    "content": {
+      "sender": "{prime_broker_name} Risk Desk",
+      "subject": "URGENT: Critical Leverage (12.5x)",
+      "body": "Dear Fund Manager,\n\nYour effective leverage has reached 12.5x. You are dangerously close to our liquidation threshold of 15.0x. Immediate action is required to reduce exposure.\n\nRegards,\n{prime_broker_name} Risk Desk",
+      "type": "alert"
+    },
+    "active": true
+  },
+  {
+    "id": "email-margin-call",
+    "channel": "email",
+    "creation_trigger": "game_event",
+    "creation_trigger_config": {
+      "event_type": "margin_call"
+    },
+    "features": {
+      "read_only": true,
+      "requires_response": false
+    },
+    "impact": {
+      "type": "simulation",
+      "simulation": {
+        "game_over": true,
+        "reason": "margin_call"
+      }
+    },
+    "content": {
+      "sender": "{prime_broker_name} Risk Desk",
+      "subject": "MARGIN CALL: AUTOMATIC LIQUIDATION",
+      "body": "MARGIN CALL EXECUTED\n\nYour effective leverage has exceeded 15.0x. In accordance with our risk management protocols, we have automatically liquidated your portfolio.\n\nAll positions have been closed. Trading is halted.\n\nThis is a final notice.\n\n{prime_broker_name} Risk Desk",
       "type": "alert"
     },
     "active": true

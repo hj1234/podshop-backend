@@ -380,24 +380,24 @@ async def get_game_results(shareable_id: str):
 
 @router.get("/leaderboard")
 async def get_leaderboard(limit: int = 20, offset: int = 0):
-    """Get leaderboard with pagination"""
+    """Get leaderboard with pagination - only shows entries with positive PnL"""
     conn = database.get_db_connection()
     cursor = conn.cursor()
     
-    # Get total count
+    # Get total count (only positive PnL)
     cursor.execute("""
         SELECT COUNT(*) as total
         FROM historical_games
-        WHERE total_pnl IS NOT NULL
+        WHERE total_pnl IS NOT NULL AND total_pnl > 0
     """)
     total_result = cursor.fetchone()
     total_count = total_result["total"] if total_result else 0
     
-    # Get leaderboard entries (sorted by total_pnl DESC)
+    # Get leaderboard entries (sorted by total_pnl DESC, only positive PnL)
     cursor.execute("""
         SELECT fund_name, total_pnl, time_ended, completed
         FROM historical_games
-        WHERE total_pnl IS NOT NULL
+        WHERE total_pnl IS NOT NULL AND total_pnl > 0
         ORDER BY total_pnl DESC
         LIMIT ? OFFSET ?
     """, (limit, offset))
