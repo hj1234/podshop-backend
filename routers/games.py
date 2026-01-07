@@ -258,26 +258,34 @@ async def end_game(
     }
 
 @router.get("/games/historical")
-async def list_historical_games(limit: int = 50, offset: int = 0):
-    """List historical games with pagination"""
+async def list_historical_games(limit: int = 50, offset: int = 0, search: Optional[str] = None):
+    """List historical games with pagination and optional search"""
     conn = database.get_db_connection()
     cursor = conn.cursor()
     
-    # Get total count
-    cursor.execute("""
-        SELECT COUNT(*) as total
-        FROM historical_games
-    """)
+    # Build WHERE clause for search
+    where_clause = ""
+    params = []
+    if search:
+        where_clause = "WHERE fund_name LIKE ?"
+        params.append(f"%{search}%")
+    
+    # Get total count (with search filter if applicable)
+    count_query = f"SELECT COUNT(*) as total FROM historical_games {where_clause}"
+    cursor.execute(count_query, params)
     total_result = cursor.fetchone()
     total_count = total_result["total"] if total_result else 0
     
-    # Get paginated games
-    cursor.execute("""
+    # Get paginated games (with search filter if applicable)
+    query = f"""
         SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
         FROM historical_games
+        {where_clause}
         ORDER BY time_started DESC
         LIMIT ? OFFSET ?
-    """, (limit, offset))
+    """
+    query_params = params + [limit, offset]
+    cursor.execute(query, query_params)
     
     games = cursor.fetchall()
     conn.close()
