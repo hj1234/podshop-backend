@@ -253,6 +253,19 @@ def move_old_games_to_historical():
     
     return len(old_games)
 
+def delete_historical_game(game_id: str) -> bool:
+    """Delete a historical game by ID. Returns True if deleted, False if not found."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("DELETE FROM historical_games WHERE id = ?", (game_id,))
+    deleted = cursor.rowcount > 0
+    
+    conn.commit()
+    conn.close()
+    
+    return deleted
+
 # Initialize database on import
 init_database()
 

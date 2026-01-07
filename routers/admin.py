@@ -3,6 +3,7 @@ from typing import Dict, Any, List, Optional
 import json
 from pathlib import Path
 import os
+import database
 
 router = APIRouter()
 
@@ -253,4 +254,16 @@ async def delete_news_template(template_id: str, _: bool = Depends(verify_token)
     
     _save_json_file("news_templates.json", templates)
     return {"status": "deleted", "template_id": template_id}
+
+# ===== HISTORICAL GAMES ENDPOINTS =====
+
+@router.delete("/games/historical/{game_id}")
+async def delete_historical_game(game_id: str, _: bool = Depends(verify_token)) -> Dict[str, Any]:
+    """Delete a historical game from the database"""
+    deleted = database.delete_historical_game(game_id)
+    
+    if not deleted:
+        raise HTTPException(status_code=404, detail=f"Historical game {game_id} not found")
+    
+    return {"status": "deleted", "game_id": game_id}
 
