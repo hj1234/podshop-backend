@@ -258,10 +258,30 @@ async def end_game(
     }
 
 @router.get("/games/historical")
-async def list_historical_games(limit: int = 50, offset: int = 0, search: Optional[str] = None):
-    """List historical games with pagination and optional search"""
+async def list_historical_games(
+    limit: int = 50, 
+    offset: int = 0, 
+    search: Optional[str] = None,
+    sort_by: Optional[str] = "time_started",
+    sort_order: Optional[str] = "DESC"
+):
+    """List historical games with pagination, search, and sorting"""
     conn = database.get_db_connection()
     cursor = conn.cursor()
+    
+    # Validate sort_by column (prevent SQL injection)
+    allowed_columns = {
+        'id', 'fund_name', 'time_started', 'time_ended', 
+        'time_played', 'completed', 'total_pnl', 'geolocation', 'created_at'
+    }
+    
+    if sort_by not in allowed_columns:
+        sort_by = 'time_started'
+    
+    # Validate sort_order
+    sort_order = sort_order.upper() if sort_order else 'DESC'
+    if sort_order not in ('ASC', 'DESC'):
+        sort_order = 'DESC'
     
     # Build WHERE clause for search
     where_clause = ""
@@ -276,12 +296,31 @@ async def list_historical_games(limit: int = 50, offset: int = 0, search: Option
     total_result = cursor.fetchone()
     total_count = total_result["total"] if total_result else 0
     
-    # Get paginated games (with search filter if applicable)
+    # Handle NULL values in sorting (put NULLs last)
+    # SQLite doesn't support NULLS LAST directly in all versions, so we use CASE
+    # For datetime/float columns that can be NULL
+    if sort_by in ('time_started', 'time_ended', 'created_at', 'total_pnl', 'time_played', 'geolocation'):
+        # Use CASE to put NULLs last: CASE WHEN column IS NULL THEN 1 ELSE 0 END, then the column
+        if sort_order == 'ASC':
+            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+        else:
+            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
+    elif sort_by == 'completed':
+        # For boolean, convert to integer for proper sorting
+        order_clause = f"ORDER BY CAST({sort_by} AS INTEGER) {sort_order}"
+    else:
+        # For text columns (id, fund_name)
+        if sort_order == 'ASC':
+            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+        else:
+            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
+    
+    # Get paginated games (with search filter and sorting)
     query = f"""
         SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
         FROM historical_games
         {where_clause}
-        ORDER BY time_started DESC
+        {order_clause}
         LIMIT ? OFFSET ?
     """
     query_params = params + [limit, offset]
