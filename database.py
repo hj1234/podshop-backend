@@ -266,6 +266,73 @@ def delete_historical_game(game_id: str) -> bool:
     
     return deleted
 
+def parse_time_played_to_seconds(time_played_str: Optional[str]) -> int:
+    """Parse time_played string (e.g., '5m 30s' or '30s') to total seconds"""
+    if not time_played_str:
+        return 0
+    
+    try:
+        total_seconds = 0
+        # Handle format like "5m 30s" or "30s" or "1h 5m 30s"
+        parts = time_played_str.strip().split()
+        
+        for part in parts:
+            part = part.strip()
+            if part.endswith('h'):
+                hours = int(part[:-1])
+                total_seconds += hours * 3600
+            elif part.endswith('m'):
+                minutes = int(part[:-1])
+                total_seconds += minutes * 60
+            elif part.endswith('s'):
+                seconds = int(part[:-1])
+                total_seconds += seconds
+        
+        return total_seconds
+    except (ValueError, AttributeError) as e:
+        print(f"Error parsing time_played '{time_played_str}': {e}")
+        return 0
+
+def format_seconds_to_time_played(total_seconds: int) -> str:
+    """Format total seconds to readable format (e.g., '1h 5m 30s' or '5m 30s' or '30s')"""
+    if total_seconds < 0:
+        return "0s"
+    
+    hours = total_seconds // 3600
+    minutes = (total_seconds % 3600) // 60
+    seconds = total_seconds % 60
+    
+    parts = []
+    if hours > 0:
+        parts.append(f"{hours}h")
+    if minutes > 0:
+        parts.append(f"{minutes}m")
+    if seconds > 0 or len(parts) == 0:
+        parts.append(f"{seconds}s")
+    
+    return " ".join(parts)
+
+def get_total_time_played() -> str:
+    """Calculate total time played across all historical games"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Get all time_played values
+    cursor.execute("""
+        SELECT time_played FROM historical_games
+        WHERE time_played IS NOT NULL
+    """)
+    
+    rows = cursor.fetchall()
+    conn.close()
+    
+    total_seconds = 0
+    for row in rows:
+        time_played_str = row["time_played"]
+        total_seconds += parse_time_played_to_seconds(time_played_str)
+    
+    return format_seconds_to_time_played(total_seconds)
+
 # Initialize database on import
 init_database()
 

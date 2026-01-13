@@ -327,6 +327,10 @@ async def list_historical_games(
     cursor.execute(query, query_params)
     
     games = cursor.fetchall()
+    
+    # Calculate total time played across all historical games
+    total_time_played = database.get_total_time_played()
+    
     conn.close()
     
     return {
@@ -345,6 +349,7 @@ async def list_historical_games(
             for game in games
         ],
         "total": total_count,
+        "total_time_played": total_time_played,
         "limit": limit,
         "offset": offset,
         "has_more": (offset + limit) < total_count
