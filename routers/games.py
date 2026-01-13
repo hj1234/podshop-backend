@@ -296,45 +296,100 @@ async def list_historical_games(
     total_result = cursor.fetchone()
     total_count = total_result["total"] if total_result else 0
     
-    # Handle NULL values in sorting (put NULLs last)
-    # SQLite doesn't support NULLS LAST directly in all versions, so we use CASE
-    # For datetime/float columns that can be NULL
-    if sort_by in ('time_started', 'time_ended', 'created_at', 'total_pnl', 'time_played', 'geolocation'):
-        # Use CASE to put NULLs last: CASE WHEN column IS NULL THEN 1 ELSE 0 END, then the column
+    # Special handling for time_played sorting (sort by duration, not alphabetically)
+    if sort_by == 'time_played':
+        # Fetch all matching games to sort by duration in Python
+        query = f"""
+            SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
+            FROM historical_games
+            {where_clause}
+        """
+        cursor.execute(query, params)
+        all_games = cursor.fetchall()
+        
+        # Convert to list of dicts and add duration in seconds for sorting
+        games_with_duration = []
+        for game in all_games:
+            time_played = game["time_played"]
+            game_dict = {
+                "id": game["id"],
+                "fund_name": game["fund_name"],
+                "time_started": game["time_started"],
+                "time_ended": game["time_ended"],
+                "completed": bool(game["completed"]),
+                "geolocation": game["geolocation"],
+                "time_played": time_played,
+                "total_pnl": game["total_pnl"],
+                "created_at": game["created_at"],
+                "_duration_seconds": database.parse_time_played_to_seconds(time_played) if time_played else None,
+                "_has_time": time_played is not None
+            }
+            games_with_duration.append(game_dict)
+        
+        # Sort by duration seconds
+        # Put NULL/missing time_played at the end
         if sort_order == 'ASC':
-            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+            # ASC: NULLs last by checking _has_time first, then duration
+            games_with_duration.sort(
+                key=lambda x: (0 if x["_has_time"] else 1, x["_duration_seconds"] or 0)
+            )
         else:
-            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
-    elif sort_by == 'completed':
-        # For boolean, convert to integer for proper sorting
-        order_clause = f"ORDER BY CAST({sort_by} AS INTEGER) {sort_order}"
+            # DESC: NULLs last by checking _has_time first (NULLs=1 come after), then negate duration for reverse
+            games_with_duration.sort(
+                key=lambda x: (0 if x["_has_time"] else 1, -(x["_duration_seconds"] or 0))
+            )
+        
+        # Apply pagination
+        games_paginated = games_with_duration[offset:offset + limit]
+        
+        # Remove the helper fields
+        games = [
+            {k: v for k, v in game.items() if k not in ("_duration_seconds", "_has_time")}
+            for game in games_paginated
+        ]
     else:
-        # For text columns (id, fund_name)
-        if sort_order == 'ASC':
-            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+        # Handle NULL values in sorting (put NULLs last)
+        # SQLite doesn't support NULLS LAST directly in all versions, so we use CASE
+        # For datetime/float columns that can be NULL
+        if sort_by in ('time_started', 'time_ended', 'created_at', 'total_pnl', 'geolocation'):
+            # Use CASE to put NULLs last: CASE WHEN column IS NULL THEN 1 ELSE 0 END, then the column
+            if sort_order == 'ASC':
+                order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+            else:
+                order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
+        elif sort_by == 'completed':
+            # For boolean, convert to integer for proper sorting
+            order_clause = f"ORDER BY CAST({sort_by} AS INTEGER) {sort_order}"
         else:
-            order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
-    
-    # Get paginated games (with search filter and sorting)
-    query = f"""
-        SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
-        FROM historical_games
-        {where_clause}
-        {order_clause}
-        LIMIT ? OFFSET ?
-    """
-    query_params = params + [limit, offset]
-    cursor.execute(query, query_params)
-    
-    games = cursor.fetchall()
-    
-    # Calculate total time played across all historical games
+            # For text columns (id, fund_name)
+            if sort_order == 'ASC':
+                order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} ASC"
+            else:
+                order_clause = f"ORDER BY CASE WHEN {sort_by} IS NULL THEN 1 ELSE 0 END, {sort_by} DESC"
+        
+        # Get paginated games (with search filter and sorting)
+        query = f"""
+            SELECT id, fund_name, time_started, time_ended, completed, geolocation, time_played, total_pnl, created_at
+            FROM historical_games
+            {where_clause}
+            {order_clause}
+            LIMIT ? OFFSET ?
+        """
+        query_params = params + [limit, offset]
+        cursor.execute(query, query_params)
+        
+        # Calculate total time played across all historical games
     total_time_played = database.get_total_time_played()
     
     conn.close()
     
-    return {
-        "games": [
+    # Convert games to dicts if they're Row objects (when not sorting by time_played)
+    if sort_by == 'time_played':
+        # Games are already dicts when sorting by time_played
+        games_list = games
+    else:
+        # Convert Row objects to dicts
+        games_list = [
             {
                 "id": game["id"],
                 "fund_name": game["fund_name"],
@@ -347,7 +402,10 @@ async def list_historical_games(
                 "created_at": game["created_at"]
             }
             for game in games
-        ],
+        ]
+    
+    return {
+        "games": games_list,
         "total": total_count,
         "total_time_played": total_time_played,
         "limit": limit,
